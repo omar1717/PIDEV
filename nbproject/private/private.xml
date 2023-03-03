@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/omar/Documents/NetBeansProjects/USER/src/Entities/user.java</file>
+            <file>file:/C:/Users/omar/Documents/NetBeansProjects/USER/src/user/USER.java</file>
+            <file>file:/C:/Users/omar/Documents/NetBeansProjects/USER/src/Utils/MyConnection.java</file>
+            <file>file:/C:/Users/omar/Documents/NetBeansProjects/USER/src/SERVICES/Voteservices.java</file>
+            <file>file:/C:/Users/omar/Documents/NetBeansProjects/USER/src/Entities/IVOTES.java</file>
+            <file>file:/C:/Users/omar/Documents/NetBeansProjects/USER/src/user/InternauteController.java</file>
+            <file>file:/C:/Users/omar/Documents/NetBeansProjects/USER/src/user/VotesController.java</file>
+            <file>file:/C:/Users/omar/Documents/NetBeansProjects/USER/src/user/Internaute.fxml</file>
+            <file>file:/C:/Users/omar/Documents/NetBeansProjects/USER/src/user/Style.css</file>
+            <file>file:/C:/Users/omar/Documents/NetBeansProjects/USER/src/user/EditController.java</file>
+            <file>file:/C:/Users/omar/Documents/NetBeansProjects/USER/src/Entities/Client.java</file>
+            <file>file:/C:/Users/omar/Documents/NetBeansProjects/USER/src/SERVICES/userServices.java</file>
+            <file>file:/C:/Users/omar/Documents/NetBeansProjects/USER/src/user/RespController.java</file>
+            <file>file:/C:/Users/omar/Documents/NetBeansProjects/USER/src/user/PasswordController.java</file>
+            <file>file:/C:/Users/omar/Documents/NetBeansProjects/USER/src/user/AdminDashboardController.java</file>
+            <file>file:/C:/Users/omar/Documents/NetBeansProjects/USER/src/user/HomePageController.java</file>
+            <file>file:/C:/Users/omar/Documents/NetBeansProjects/USER/src/Entities/Votes.java</file>
+            <file>file:/C:/Users/omar/Documents/NetBeansProjects/USER/src/user/AdminHomePage.fxml</file>
+            <file>file:/C:/Users/omar/Documents/NetBeansProjects/USER/src/Entities/Iuser.java</file>
+            <file>file:/C:/Users/omar/Documents/NetBeansProjects/USER/src/user/AdminHomePageController.java</file>
+            <file>file:/C:/Users/omar/Documents/NetBeansProjects/USER/src/user/AvotesController.java</file>
+            <file>file:/C:/Users/omar/Documents/NetBeansProjects/USER/src/user/FXMLController.java</file>
+            <file>file:/C:/Users/omar/Documents/NetBeansProjects/USER/src/user/SceneController.java</file>
+            <file>file:/C:/Users/omar/Documents/NetBeansProjects/USER/src/user/LoginController.java</file>
+            <file>file:/C:/Users/omar/Documents/NetBeansProjects/USER/src/user/ProfileController.java</file>
+        </group>
+    </open-files>
+</project-private>

@@ -1,0 +1,29 @@
+.menubar:hover{
+    -fx-border-color: #131313;
+    -fx-border-width: 0px 0px 3px 0px;
+   
+}
+.root {
+    -fx-background-image: url('../Images/theatre.jpg');
+  -fx-background-size:cover;
+}
+.rootA {
+    -fx-background-image: url('../Images/CloudCloning.png');
+  -fx-background-size:cover;
+}
+.rootI {
+    -fx-background-image: url('../Images/CINEMARED.jpg');
+  -fx-background-size:cover;
+}
+.homebar:hover{
+    -fx-border-color: #ffffff;
+    -fx-border-width: 0px 0px 3px 0px;
+   
+}
+
+.default-color0.chart-pie{
+    -fx-pie-color: #cfcfcf;
+}
+.default-color1.chart-pie{
+    -fx-pie-color: #131313;
+}

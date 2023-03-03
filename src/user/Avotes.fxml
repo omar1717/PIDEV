@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import org.controlsfx.control.Rating?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="user.AvotesController">
+   <children>
+      <Label layoutX="31.0" layoutY="25.0" prefHeight="17.0" prefWidth="72.0" text="ADMIN ">
+         <graphic>
+            <FontAwesomeIconView glyphName="LOCK" size="20" />
+         </graphic>
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <VBox layoutX="31.0" layoutY="77.0" prefHeight="156.0" prefWidth="100.0" spacing="27.0">
+         <children>
+            <Label prefHeight="21.0" prefWidth="71.0" text="ID" />
+            <Label text="Artist Vote" />
+            <Label text="Event Vote" />
+            <Label prefHeight="17.0" prefWidth="90.0" text="Email du Client" />
+         </children>
+      </VBox>
+      <VBox layoutX="131.0" layoutY="77.0" prefHeight="156.0" prefWidth="176.0" spacing="13.0">
+         <children>
+            <JFXTextField fx:id="AVid" focusColor="BLACK" promptText="ID" />
+            <Rating fx:id="Aavote" partialRating="true" updateOnHover="true" />
+            <Rating fx:id="Aevote" partialRating="true" updateOnHover="true" />
+            <JFXTextField fx:id="clientid" focusColor="BLACK" promptText="Client Email" />
+         </children>
+      </VBox>
+      <Button fx:id="Avote" layoutX="29.0" layoutY="321.0" mnemonicParsing="false" onAction="#OnBtnClick" text="Insert" />
+      <Button fx:id="Adelvote" layoutX="194.0" layoutY="321.0" mnemonicParsing="false" onAction="#OnBtnClick" text="Delete" />
+      <Button fx:id="Auvote" layoutX="104.0" layoutY="321.0" mnemonicParsing="false" onAction="#OnBtnClick" text="Update" />
+      <TableView fx:id="Vtable" layoutX="428.0" layoutY="-3.0" prefHeight="407.0" prefWidth="272.0">
+        <columns>
+          <TableColumn fx:id="Avtid" prefWidth="42.0" text="ID" />
+          <TableColumn fx:id="Aav" prefWidth="84.0" text="Artist Vote" />
+            <TableColumn fx:id="Aev" prefWidth="79.0" text="Event Vote" />
+            <TableColumn fx:id="tclientid" prefWidth="67.0" text="Client ID" />
+        </columns>
+      </TableView>
+      <JFXButton fx:id="manageusers" layoutX="104.0" layoutY="365.0" onAction="#OnBtnClick" prefHeight="25.0" prefWidth="201.0" text="Manage Users" underline="true" />
+      <Button fx:id="refresh" layoutX="294.0" layoutY="321.0" mnemonicParsing="false" onAction="#OnBtnClick" text="Refresh" />
+      <ImageView fitHeight="42.0" fitWidth="72.0" layoutX="343.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/Screenshot_20230131_114532.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="53.0" layoutY="38.0" text="votes" />
+      <JFXComboBox fx:id="selectE2" focusColor="TRANSPARENT" layoutX="29.0" layoutY="250.0" prefHeight="27.0" prefWidth="149.0" promptText="Choose your Artist" style="-fx-border-color: black;" unFocusColor="TRANSPARENT" />
+      <JFXComboBox fx:id="selectA1" focusColor="TRANSPARENT" layoutX="204.0" layoutY="250.0" prefHeight="25.0" prefWidth="163.0" promptText="Choose your Artist" style="-fx-border-color: black;" unFocusColor="TRANSPARENT" />
+   </children>
+</AnchorPane>

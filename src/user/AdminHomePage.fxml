@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="700.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="user.AdminHomePageController">
+   <children>
+      <HBox prefHeight="51.0" prefWidth="710.0" spacing="10.0" style="-fx-background-color: black;">
+         <children>
+            <JFXButton fx:id="userAd" graphicTextGap="7.0" onAction="#OnButtonClick" prefHeight="51.0" prefWidth="107.0" ripplerFill="WHITE" styleClass="homebar" stylesheets="@Style.css" text="Utulisateurs" textFill="WHITE">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="USER" size="15" wrappingWidth="12.0" />
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="eventsAd" graphicTextGap="7.0" onAction="#OnButtonClick" prefHeight="51.0" prefWidth="117.0" ripplerFill="WHITE" styleClass="homebar" stylesheets="@Style.css" text="Evennements" textFill="WHITE">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="EYE" size="15" wrappingWidth="12.0" />
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="boutiqueAd" graphicTextGap="7.0" onAction="#OnButtonClick" prefHeight="51.0" prefWidth="89.0" styleClass="homebar" stylesheets="@Style.css" text="Boutique" textFill="WHITE">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="MONEY" size="15" wrappingWidth="12.0" />
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="articlesAd" graphicTextGap="7.0" onAction="#OnButtonClick" prefHeight="51.0" prefWidth="95.0" styleClass="homebar" stylesheets="@Style.css" text="Journalistes" textFill="WHITE">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="FILE" />
+               </graphic>
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="artistsAd" graphicTextGap="7.0" onAction="#OnButtonClick" prefHeight="51.0" prefWidth="86.0" styleClass="homebar" stylesheets="@Style.css" text="Artistes" textFill="WHITE">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="STAR" />
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="equipAd" graphicTextGap="7.0" onAction="#OnButtonClick" prefHeight="51.0" prefWidth="115.0" styleClass="homebar" stylesheets="@Style.css" text="Equipements" textFill="WHITE">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="INDUSTRY" />
+               </graphic>
+            </JFXButton>
+            <Label alignment="CENTER" prefHeight="50.0" prefWidth="28.0">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="BARS" />
+               </graphic>
+            </Label>
+         </children>
+      </HBox>
+      <Pane layoutY="49.0" prefHeight="312.0" prefWidth="710.0" styleClass="rootA" stylesheets="@Style.css">
+         <effect>
+            <ColorAdjust brightness="-0.5" contrast="0.76" />
+         </effect>
+         <children>
+            <Label layoutX="130.0" layoutY="87.0" prefHeight="124.0" prefWidth="470.0" text="Gerer Tout En Un Clic !" textFill="WHITE">
+               <font>
+                  <Font name="Constantia Bold" size="41.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutY="360.0" prefHeight="51.0" prefWidth="710.0" style="-fx-background-color: BLACK;">
+         <children>
+            <ImageView fitHeight="51.0" fitWidth="87.0" layoutX="227.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/logoooo.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="51.0" fitWidth="87.0" layoutX="389.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/Screenshot_20230131_114532.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="337.0" layoutY="11.0" text="X" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

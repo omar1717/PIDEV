@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="401.0" prefWidth="702.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="user.RespController">
+   <children>
+      <VBox layoutX="30.0" layoutY="51.0" prefHeight="249.0" prefWidth="100.0" spacing="21.0">
+         <children>
+            <Label text="ID" />
+            <Label text="Nom" />
+            <Label text="Prenom" />
+            <Label text="Date de Naissance" />
+            <Label text="Email" />
+            <Label text="Mot de Passe" />
+            <Label text="Role" />
+         </children>
+      </VBox>
+      <VBox layoutX="140.0" layoutY="50.0" prefHeight="249.0" prefWidth="115.0" spacing="10.0">
+         <children>
+            <JFXTextField fx:id="tfid" prefHeight="27.0" prefWidth="122.0" style="-fx-border-color: BLACK;" unFocusColor="#ffffff00" />
+            <JFXTextField fx:id="tfnom" style="-fx-border-color: BLACK;" unFocusColor="#ffffff00" />
+            <JFXTextField fx:id="tfprenom" style="-fx-border-color: BLACK;" unFocusColor="#ffffff00" />
+            <DatePicker fx:id="tfdate" />
+            <JFXTextField fx:id="tfemail" style="-fx-border-color: BLACK;" unFocusColor="#ffffff00" />
+            <JFXTextField fx:id="tfmdp" style="-fx-border-color: BLACK;" unFocusColor="#ffffff00" />
+            <JFXTextField fx:id="tfrole" style="-fx-border-color: BLACK;" unFocusColor="#ffffff00" />
+         </children>
+      </VBox>
+      <TableView fx:id="Atable" layoutX="265.0" layoutY="52.0" prefHeight="349.0" prefWidth="435.0">
+        <columns>
+          <TableColumn fx:id="Aid" prefWidth="30.0" text="ID" />
+          <TableColumn fx:id="Anom" prefWidth="69.0" text="NOM" />
+            <TableColumn fx:id="Aprenom" prefWidth="64.0" text="PRENOM" />
+            <TableColumn fx:id="Adate" prefWidth="71.0" text="DATEN" />
+            <TableColumn fx:id="Aemail" prefWidth="87.0" text="EMAIL" />
+            <TableColumn fx:id="Amdp" prefWidth="57.0" text="MDP" />
+            <TableColumn fx:id="Arole" prefWidth="56.0" text="Role" />
+        </columns>
+      </TableView>
+      <Button fx:id="insert" layoutX="21.0" layoutY="320.0" mnemonicParsing="false" onAction="#OnBtnClick" text="Insert" />
+      <Button fx:id="Adelete" layoutX="93.0" layoutY="320.0" mnemonicParsing="false" onAction="#OnBtnClick" text="Delete" />
+      <Button fx:id="Aupdate" layoutX="176.0" layoutY="320.0" mnemonicParsing="false" onAction="#OnBtnClick" text="Update" />
+      <Label layoutX="21.0" layoutY="15.0" prefHeight="17.0" prefWidth="72.0" text="ADMIN ">
+         <graphic>
+            <FontAwesomeIconView glyphName="LOCK" size="20" />
+         </graphic>
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="34.0" fitWidth="115.0" layoutX="183.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/Screenshot_20230131_114532.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="voting" layoutX="14.0" layoutY="362.0" onAction="#OnBtnClick" prefHeight="25.0" prefWidth="107.0" text="Manage Voting" underline="true" />
+      <Label layoutX="43.0" layoutY="28.0" text="Clients" />
+      <JFXButton fx:id="dash" layoutX="93.0" layoutY="16.0" onAction="#OnBtnClick" text="Dashboard" underline="true" />
+      <JFXButton fx:id="printpdf" layoutX="146.0" layoutY="362.0" onAction="#OnBtnClick" text="PrintToPDF" textFill="RED" underline="true" />
+      <JFXButton fx:id="returnadh" layoutX="425.0" layoutY="13.0" onAction="#OnBtnClick" prefHeight="25.0" prefWidth="115.0" text="Return">
+         <graphic>
+            <FontAwesomeIconView glyphName="HOME" />
+         </graphic>
+      </JFXButton>
+   </children>
+</AnchorPane>
