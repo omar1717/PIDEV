@@ -60,6 +60,7 @@ public class VotesController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         try {
             showArtists();
+            showEvents();
         } catch (SQLException ex) {
             Logger.getLogger(VotesController.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -79,9 +80,11 @@ public class VotesController implements Initializable {
     }
             if(event.getSource() == savevote   ){
            
-                System.out.println(getselectedartist());
+              
                 UpdateVote();
-                 sc.switchToScene4(event);
+                  sc.switchToScene4(event);
+                 
+                
     }
     }
     public void insertVote() throws SQLException {
@@ -94,7 +97,7 @@ public class VotesController implements Initializable {
          
             
                 Voteservices vs = new Voteservices();
-                Votes v = new Votes(VoteA,voteE,LoginController.getsession(),getselectedartist());
+                Votes v = new Votes(VoteA,voteE,LoginController.getsession(),getselectedartist(),getselectedevent());
              vs.ajouterVote(v);
                
             
@@ -106,6 +109,14 @@ public class VotesController implements Initializable {
           String artist = selectA.getSelectionModel().getSelectedItem().toString();
         
          return vs.getArtist(artist);
+        
+    }
+    
+       public String getselectedevent(){
+         Voteservices vs = new Voteservices();
+          String event = selectE.getSelectionModel().getSelectedItem().toString();
+        
+         return vs.getEvent(event);
         
     }
     
@@ -146,7 +157,7 @@ public class VotesController implements Initializable {
          Connection myconn =MyConnection.getInstance().getConnexion();
         PreparedStatement pst = null; 
         //Our Query
-        String query="UPDATE votes SET voteA = ? , voteE = ? , idA =?  WHERE idC = ?";
+        String query="UPDATE votes SET voteA = ? , voteE = ? , idA =? , idE =?  WHERE idC = ?";
         try
         {          
             //Create PreparedStatement
@@ -159,8 +170,8 @@ public class VotesController implements Initializable {
             pst.setDouble(2, votee.getRating());
             
             pst.setInt(3,getselectedartist());
-             pst.setInt(4, LoginController.getsession());
-        
+             pst.setString(4, getselectedevent());
+        pst.setInt(5, LoginController.getsession());
             
             //Execute Statement
             pst.executeUpdate();
@@ -172,6 +183,29 @@ public class VotesController implements Initializable {
         }    
     }
     
-    
+     public void showEvents() throws SQLException{
+          Connection myconn =MyConnection.getInstance().getConnexion();
+     String query ="Select * FROM event ";
+      ObservableList data = FXCollections.observableArrayList();
+      
+     try{
+         
+         PreparedStatement ste= myconn.prepareStatement(query); {
+            
+            
+     
+         ResultSet rs = ste.executeQuery();
+         while (rs.next()){
+             data.add(rs.getString(1) );
+             
+         }
+         
+          selectE.setItems(data);
+         }
+    }catch (SQLException ex) {
+            System.out.println(ex);
+            
+        }
+}
 
     }

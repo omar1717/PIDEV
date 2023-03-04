@@ -107,7 +107,8 @@ public class ProfileController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         try {
             displayuser();
-            displayuservote();
+            displayuservoteAr();
+            displayuservoteEv();
           displayQr();
         } catch (SQLException ex) {
             Logger.getLogger(ProfileController.class.getName()).log(Level.SEVERE, null, ex);
@@ -157,7 +158,8 @@ public class ProfileController implements Initializable {
     } 
                if(event.getSource() == profile ){
                 displayuser();
-                displayuservote();
+                displayuservoteAr();
+                displayuservoteEv();
           
                    
     }
@@ -199,7 +201,7 @@ public void displayuser() throws SQLException{
         }
     
 }
-public void displayuservote() throws SQLException{
+public void displayuservoteAr() throws SQLException{
      Connection myconn =MyConnection.getInstance().getConnexion();
      String query ="Select voteA, nomA from votes inner join artist WHERE  votes.idA = artist.idA  AND votes.idC = ?";
      
@@ -213,8 +215,34 @@ public void displayuservote() throws SQLException{
          while (rs.next())
          {   
              rat1.setRating(rs.getDouble(1));
-     //    rat2.setRating(rs.getDouble(3));
+     
          lartist.setText(rs.getString(2));
+        
+         }
+        
+         } 
+     }catch (SQLException ex) {
+            System.out.println(ex);
+            
+        }
+    
+}
+public void displayuservoteEv() throws SQLException{
+     Connection myconn =MyConnection.getInstance().getConnexion();
+     String query ="Select voteE, nom_event from votes inner join event WHERE votes.idE = event.nom_event AND votes.idC = ?;";
+     
+     try{
+         
+         PreparedStatement ste= myconn.prepareStatement(query); {
+            ste.setInt(1,LoginController.getsession());
+            
+     
+         ResultSet rs = ste.executeQuery();
+         while (rs.next())
+         {   
+            
+         rat2.setRating(rs.getDouble(1));
+         levent.setText(rs.getString(2));
         
          }
         

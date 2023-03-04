@@ -31,12 +31,13 @@ Connection myconn =MyConnection.getInstance().getConnexion();
       
         
              
-            String sql="INSERT INTO `votes` ( `voteA`, `voteE`, `idC`, `idA`) VALUES ( ?, ?, ?, ?)"; 
+            String sql="INSERT INTO `votes` ( `voteA`, `voteE`, `idC`, `idA`,`idE`) VALUES ( ?, ?, ?, ?,?)"; 
             PreparedStatement ste= myconn.prepareStatement(sql);
             ste.setDouble(1,v.getVoteA());
             ste.setDouble(2,v.getVoteE());
           ste.setInt(3,v.getIdC());
            ste.setInt(4,v.getIdA());
+            ste.setString(5, v.getIdE());
             ste.executeUpdate();
             JOptionPane.showMessageDialog(null , "Added");
            
@@ -129,5 +130,32 @@ public int  getclient(String email){
         }
     return x;
 }
+
+ public String getEvent(String event){
+        String x = null ;
+          Connection myconn =MyConnection.getInstance().getConnexion();
+     String query ="Select * FROM event where nom_event = ? ";
+
+      
+        try{
+         
+         PreparedStatement ste= myconn.prepareStatement(query); {
+            
+             ste.setString(1,event);
+            
+               ResultSet rs = ste.executeQuery();
+         
+         while(rs.next()){
+             x = rs.getString(1);
+         }
+     
+         
+    }
+        } catch (SQLException ex) {
+            System.out.println(ex);
+            
+        }
+        return x;
+    }
 
 }

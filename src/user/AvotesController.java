@@ -71,8 +71,9 @@ public class AvotesController implements Initializable {
     private JFXButton manageusers;
     @FXML
     private JFXComboBox<?> selectA1;
-    @FXML
     private JFXComboBox<?> selectA;
+    @FXML
+    private JFXComboBox<?> selectE2;
 
     /**
      * Initializes the controller class.
@@ -82,6 +83,7 @@ public class AvotesController implements Initializable {
       ShowVotes();
         try {
             showArtistsA();
+            showEventsA();
         } catch (SQLException ex) {
             Logger.getLogger(AvotesController.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -124,7 +126,7 @@ public class AvotesController implements Initializable {
          
             
                 Voteservices vs = new Voteservices();
-                Votes v = new Votes(VoteA,voteE, vs.getclient(email),getselectedartistA());
+                Votes v = new Votes(VoteA,voteE, vs.getclient(email),getselectedartistA(),getselecteEventA());
              vs.ajouterVote(v);
                
             
@@ -183,6 +185,13 @@ public class AvotesController implements Initializable {
          return vs.getArtist(artist);
         
     }
+      public String getselecteEventA(){
+         Voteservices vs = new Voteservices();
+          String event = selectE2.getSelectionModel().getSelectedItem().toString();
+        
+         return vs.getEvent(event);
+        
+    }
         public void showArtistsA() throws SQLException{
           Connection myconn =MyConnection.getInstance().getConnexion();
      String query ="Select * FROM artist ";
@@ -220,7 +229,7 @@ public class AvotesController implements Initializable {
             
             PreparedStatement pst = null; 
             //Our Query
-            String query="UPDATE votes SET voteA = ? , voteE = ? , idA = ? WHERE id = ?";
+            String query="UPDATE votes SET voteA = ? , voteE = ? , idA = ? , idE = ?  WHERE id = ?";
             try
             {          
             //Create PreparedStatement
@@ -229,7 +238,8 @@ public class AvotesController implements Initializable {
              pst.setDouble(1, Aavote.getRating());
             pst.setDouble(2, Aevote.getRating());
              pst.setInt(3,getselectedartistA());
-            pst.setString(4,IdSelected);
+             pst.setString(4, getselecteEventA());
+            pst.setString(5,IdSelected);
             //Execute Statement
             pst.executeUpdate();
             //Erreur Message
@@ -243,7 +253,31 @@ public class AvotesController implements Initializable {
         }
     
         
-        
+        public void showEventsA() throws SQLException{
+          Connection myconn =MyConnection.getInstance().getConnexion();
+     String query ="Select * FROM event ";
+      ObservableList data = FXCollections.observableArrayList();
+      
+     try{
+         
+         PreparedStatement ste= myconn.prepareStatement(query); {
+            
+            
+     
+         ResultSet rs = ste.executeQuery();
+         while (rs.next()){
+             data.add(rs.getString(1) );
+             
+         }
+         
+          selectE2.setItems(data);
+         }
+    }catch (SQLException ex) {
+            System.out.println(ex);
+            
+        }
+}
+
         
         
         

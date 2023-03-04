@@ -14,6 +14,7 @@ public class Votes {
   double Vote_Event;
   int id_cli;
   int idA;
+  String idE;
 
     public Votes(){
     }
@@ -46,6 +47,15 @@ public Votes(double Vote_Artiste ,double Vote_Event){
          this.id_cli=id_cli;
          this.idA=ida;
          
+         
+    }
+ public Votes( double Vote_Artiste ,double Vote_Event, int id_cli, int ida, String idE){
+     
+         this.Vote_Artiste=Vote_Artiste;
+         this.Vote_Event=Vote_Event;
+         this.id_cli=id_cli;
+         this.idA=ida;
+         this.idE=idE;
          
     }
     
@@ -86,6 +96,13 @@ public Votes(double Vote_Artiste ,double Vote_Event){
 
     public void setIdA(int ida) {
         this.idA = ida;
+    }
+      public String getIdE() {
+        return idE;
+    }
+
+    public void setIdE(String ide) {
+        this.idE = ide;
     }
     
 
