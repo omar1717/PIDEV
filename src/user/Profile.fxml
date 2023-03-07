@@ -20,7 +20,7 @@
          <top>
             <HBox prefHeight="51.0" prefWidth="612.0" spacing="10.0" BorderPane.alignment="CENTER">
                <children>
-                  <JFXButton fx:id="profile" graphicTextGap="7.0" onAction="#OnButtonClick" prefHeight="51.0" prefWidth="166.0" ripplerFill="WHITE" styleClass="menubar" stylesheets="@Style.css" text="Proflil">
+                  <JFXButton fx:id="profile" graphicTextGap="7.0" onAction="#OnButtonClick" prefHeight="51.0" prefWidth="166.0" ripplerFill="WHITE" styleClass="menubar" stylesheets="@Style.css" text="Profile">
                      <graphic>
                         <FontAwesomeIconView glyphName="USER" size="15" wrappingWidth="12.0" />
                      </graphic>

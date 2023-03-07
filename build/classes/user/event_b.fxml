@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="457.0" prefWidth="927.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="user.Event_bController">
+   <children>
+      <ImageView fitHeight="467.0" fitWidth="390.0" layoutX="-3.0" layoutY="-10.0">
+         <image>
+            <Image url="@../Images/R.jpg" />
+         </image>
+         <effect>
+            <ColorAdjust brightness="-0.71" />
+         </effect>
+      </ImageView>
+      <Label layoutX="518.0" layoutY="14.0" prefHeight="42.0" prefWidth="278.0" text="GERER EVENTS" textFill="#665c5c">
+         <font>
+            <Font name="Yu Gothic Light" size="34.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tabeleaffichage" layoutX="388.0" layoutY="59.0" onMouseClicked="#SelectEV" prefHeight="292.0" prefWidth="525.0">
+        <columns>
+          <TableColumn fx:id="type_eventcol" prefWidth="116.79998779296875" text="type_event" />
+            <TableColumn fx:id="nbre_sallecol" minWidth="8.0" prefWidth="114.0" text="nbre_salle" />
+            <TableColumn fx:id="date_debcol" prefWidth="104.0" text="date_deb" />
+            <TableColumn fx:id="date_fincol" prefWidth="101.0" text="date_fin" />
+            <TableColumn fx:id="participants" prefWidth="87.0" text="Participants" />
+        </columns>
+      </TableView>
+      <Pane layoutX="18.0" layoutY="68.0" prefHeight="281.0" prefWidth="347.0" style="-fx-background-color: black;">
+         <children>
+            <Label layoutX="3.0" layoutY="14.0" prefHeight="28.0" prefWidth="112.0" text="nom event" textFill="WHITE">
+               <font>
+                  <Font name="Yu Gothic Light" size="23.0" />
+               </font>
+            </Label>
+            <Label layoutX="-1.0" layoutY="68.0" text="type event" textFill="#fffafa">
+               <font>
+                  <Font name="Yu Gothic Light" size="23.0" />
+               </font>
+            </Label>
+            <Label layoutX="2.0" layoutY="127.0" text="numero salle" textFill="WHITE">
+               <font>
+                  <Font name="Yu Gothic Light" size="23.0" />
+               </font>
+            </Label>
+            <Label layoutX="6.0" layoutY="178.0" text="date debut" textFill="#fff7f7">
+               <font>
+                  <Font name="Yu Gothic Light" size="23.0" />
+               </font>
+            </Label>
+            <Label layoutX="8.0" layoutY="234.0" text="date fin" textFill="#fffcfc">
+               <font>
+                  <Font name="Yu Gothic Light" size="23.0" />
+               </font>
+            </Label>
+            <TextField fx:id="id_eventtxt" layoutX="135.0" layoutY="15.0" />
+            <DatePicker fx:id="date_debtxt" layoutX="135.0" layoutY="179.0" prefHeight="25.0" prefWidth="149.0" />
+            <DatePicker fx:id="date_fintxt" layoutX="135.0" layoutY="235.0" prefHeight="25.0" prefWidth="149.0" />
+            <ComboBox fx:id="listetypeev" layoutX="135.0" layoutY="127.0" prefWidth="150.0" />
+            <ComboBox fx:id="type_eventbox" layoutX="135.0" layoutY="83.0" prefWidth="150.0" />
+         </children>
+      </Pane>
+      <Button fx:id="deletebtn" layoutX="242.0" layoutY="357.0" mnemonicParsing="false" onAction="#delete" style="-fx-background-color: #303234;" text="delete" textFill="#fffdfd">
+         <font>
+            <Font name="Yu Gothic Light" size="23.0" />
+         </font>
+      </Button>
+      <Button fx:id="addbtn" layoutX="31.0" layoutY="357.0" mnemonicParsing="false" onAction="#add" prefHeight="43.0" prefWidth="82.0" style="-fx-background-color: #303234;" text="ADD" textFill="WHITE">
+         <font>
+            <Font name="Yu Gothic Light" size="18.0" />
+         </font></Button>
+      <Button fx:id="updatebtn" layoutX="138.0" layoutY="357.0" mnemonicParsing="false" onAction="#update" prefHeight="43.0" prefWidth="82.0" style="-fx-background-color: #303234;" text="update" textFill="#faf7f7">
+         <font>
+            <Font name="Yu Gothic Light" size="19.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnsalle" layoutX="683.0" layoutY="394.0" mnemonicParsing="false" onAction="#afficherppagesalle" prefHeight="38.0" prefWidth="187.0" text="cosulter les salles" textFill="#171626">
+         <font>
+            <Font name="Yu Gothic Light" size="19.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="54.0" fitWidth="101.0" layoutX="284.0">
+         <image>
+            <Image url="@../Images/Screenshot_20230131_114532.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnstat" layoutX="433.0" layoutY="394.0" mnemonicParsing="false" onAction="#showStatPage" prefHeight="38.0" prefWidth="177.0" text="statistique">
+         <font>
+            <Font name="Yu Gothic Light" size="19.0" />
+         </font></Button>
+      <Button fx:id="back" layoutX="829.0" layoutY="23.0" mnemonicParsing="false" onAction="#back" text="Back" />
+   </children>
+</AnchorPane>

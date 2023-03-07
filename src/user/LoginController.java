@@ -25,7 +25,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javax.swing.JOptionPane;
-import services.userServices;
+import SERVICES.userServices;
 import user.ProfileController;
 
 /**
@@ -91,7 +91,7 @@ public class LoginController implements Initializable {
            
           
            sc.switchToScene1(event);
-           
+                
        }
       
      

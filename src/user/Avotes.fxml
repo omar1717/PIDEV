@@ -60,7 +60,7 @@
          </image>
       </ImageView>
       <Label layoutX="53.0" layoutY="38.0" text="votes" />
-      <JFXComboBox fx:id="selectE2" focusColor="TRANSPARENT" layoutX="29.0" layoutY="250.0" prefHeight="27.0" prefWidth="149.0" promptText="Choose your Artist" style="-fx-border-color: black;" unFocusColor="TRANSPARENT" />
+      <JFXComboBox fx:id="selectE2" focusColor="TRANSPARENT" layoutX="29.0" layoutY="250.0" prefHeight="27.0" prefWidth="149.0" promptText="Choose your Event" style="-fx-border-color: black;" unFocusColor="TRANSPARENT" />
       <JFXComboBox fx:id="selectA1" focusColor="TRANSPARENT" layoutX="204.0" layoutY="250.0" prefHeight="25.0" prefWidth="163.0" promptText="Choose your Artist" style="-fx-border-color: black;" unFocusColor="TRANSPARENT" />
    </children>
 </AnchorPane>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="600" prefWidth="900" style="-fx-background-color: #333333" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="user.Main2Controller">
+   <children>
+      <VBox layoutX="19.0" layoutY="59.0" prefHeight="234.0" prefWidth="76.0" spacing="15.0">
+         <children>
+            <Label text="Nom_Prod" textFill="white">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label text="Type_Prod" textFill="white">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label text="Categorie_P" textFill="white" />
+            <Label fx:id="tfQuant_Prod" text="Quantite_P" textFill="white">
+                        </Label>
+        <Label text="PrixU_Prod" textFill="white">
+           
+        </Label>
+     </children>
+  </VBox>
+  <VBox layoutX="100.0" layoutY="46.0" prefHeight="183.0" prefWidth="190.0" spacing="10.0">
+     <children>
+        <TextField fx:id="tfNom_Prod" opacity="0.7" />
+        <TextField fx:id="tfType_Prod" layoutX="10.0" layoutY="10.0" opacity="0.77" />
+        <TextField fx:id="tfCateg_Prod" opacity="0.81" />
+        <TextField fx:id="tfQunat_Prod" layoutX="10.0" layoutY="35.0" opacity="0.85" />
+        <TextField fx:id="tfPrixU_Prod" layoutX="10.0" layoutY="85.0" opacity="0.83" />
+     </children>
+  </VBox>
+  <TableView fx:id="tvProduit" layoutX="333.0" layoutY="26.0" prefHeight="350.0" prefWidth="558.0">
+    <columns>
+        <TableColumn fx:id="colIdP" prefWidth="74.4000244140625" text="Ref_Prod" />
+      <TableColumn fx:id="colNomP" prefWidth="74.4000244140625" text="Nom_Prod" />
+        <TableColumn fx:id="colTypeP" prefWidth="75.99996948242188" text="Type_Prod" />
+        <TableColumn fx:id="colQuantiteP" prefWidth="78.4000244140625" text="Quantité_P" />
+        <TableColumn fx:id="colPrixUP" minWidth="0.0" prefWidth="67.20001220703125" text="PrixU_Prod" />
+        <TableColumn fx:id="colCategorieP" minWidth="3.199951171875" prefWidth="83.199951171875" text="Categorie" />
+        <TableColumn fx:id="colNomEvent" minWidth="3.199951171875" prefWidth="103.20003662109377" text="Nom_Event" />
+    </columns>
+  </TableView>
+      <Button fx:id="btnUpdate" layoutX="31.0" layoutY="408.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="85.0" text="Modifier" />
+      <Button fx:id="btnDelete" layoutX="135.0" layoutY="407.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="131.0" text="Supprimer" />
+<ComboBox fx:id="nomEventComboBox" layoutX="95.0" layoutY="254.0" prefWidth="150.0" promptText="Nom des Evenements" style="-fx-background-color: white;" />
+      <TextField fx:id="tfId_Prod" layoutX="20.0" layoutY="364.0" />
+      <Label layoutX="14.0" layoutY="298.0" prefHeight="48.0" prefWidth="300.0" text="Saisir le Réference du Produit à Modifer" textFill="white" />
+      <Button fx:id="ConsulterM" layoutX="702.0" layoutY="408.0" mnemonicParsing="false" onAction="#retourner1" text="Consulter meuilleur Vente" />
+      <Button fx:id="retourVIG" layoutX="764.0" layoutY="538.0" mnemonicParsing="false" onAction="#retourVersIAD" prefHeight="26.0" prefWidth="99.0" text="retour" />
+   </children>
+    
+</AnchorPane>

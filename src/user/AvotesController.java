@@ -31,8 +31,8 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javax.swing.JOptionPane;
 import org.controlsfx.control.Rating;
-import services.Voteservices;
-import services.userServices;
+import SERVICES.Voteservices;
+import SERVICES.userServices;
 
 /**
  * FXML Controller class

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="587.0" prefWidth="812.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="user.FrontController">
+   <children>
+      <TableView fx:id="tab_affichagex" layoutX="38.0" layoutY="38.0" prefHeight="410.0" prefWidth="732.0">
+        <columns>
+          <TableColumn fx:id="sujx" prefWidth="187.0" text="sujet de l'article" />
+          <TableColumn fx:id="dscrx" prefWidth="544.0" text="description de l'article" />
+        </columns>
+      </TableView>
+      <ComboBox fx:id="comboboxx" layoutX="48.0" layoutY="491.0" onAction="#combobox" prefHeight="39.0" prefWidth="190.0" promptText="Sujet" />
+   </children>
+</AnchorPane>

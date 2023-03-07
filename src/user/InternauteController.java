@@ -38,6 +38,10 @@ public class InternauteController implements Initializable {
             SceneController sc = new SceneController();
             sc.switchToScene1(event);
         }
+        if (event.getSource()== espaceJ){
+            SceneController sc = new SceneController();
+            sc.switchToScene15(event);
+        }
     }
     
 }

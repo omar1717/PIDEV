@@ -14,8 +14,8 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-import services.Voteservices;
-import services.userServices;
+import SERVICES.Voteservices;
+import SERVICES.userServices;
 
 /**
  *
@@ -25,7 +25,7 @@ public class USER extends Application {
   
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("/user/Resp.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/user/AdminHomePage.fxml"));
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();

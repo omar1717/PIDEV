@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="464.0" prefWidth="669.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MeuilleurVente.MeuilleurVenteController">
+   <children>
+      <PieChart fx:id="Chart" layoutX="50.0" />
+      <Button layoutX="524.0" layoutY="419.0" mnemonicParsing="false" onAction="#retournerVersProduitAdmin" prefHeight="26.0" prefWidth="98.0" text="Retour" />
+   </children>
+</AnchorPane>

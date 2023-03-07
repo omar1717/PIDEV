@@ -59,6 +59,20 @@ public class HomePageController implements Initializable {
           
            sc.switchToScene4(event);
     }
+            if(event.getSource() == events ){
+           
+          
+           sc.switchToScene13(event);
+    }
+            if (event.getSource()== articles){
+                sc.switchToScene19(event);
+            }
+            if (event.getSource()== artists) {
+                sc.switchToScene20(event);
+            }
+               if (event.getSource()== boutique) {
+                sc.switchToScene25(event);
+            }
     }
     
     

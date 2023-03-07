@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="766.0" prefWidth="1505.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="user.RenderArtistController">
+    <stylesheets>
+        <URL value="@renderartist.css" />
+    </stylesheets>
+   <children>
+      <ImageView fitHeight="834.0" fitWidth="1511.0" opacity="0.55">
+         <image>
+            <Image url="@../Images/paris_opera_house_ii_by_vmulligan.jpg" />
+         </image>
+      </ImageView>
+      <Pane layoutY="-3.0" opacity="0.84" prefHeight="844.0" prefWidth="1511.0" style="-fx-background-color: BLACK;">
+         <children>
+            <Label fx:id="nomArtist" layoutX="298.0" layoutY="67.0" prefHeight="95.0" prefWidth="269.0" text="nom">
+               <font>
+                  <Font name="Yu Gothic UI Light" size="58.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0" startX="0.8904761904761904" startY="0.09523809523809523">
+                     <stops>
+                        <Stop color="#e8af04" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+            <Label fx:id="prenomArtist" layoutX="298.0" layoutY="162.0" prefHeight="95.0" prefWidth="269.0" text="prenom">
+               <font>
+                  <Font name="Yu Gothic UI Light" size="48.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0" startX="0.9047619047619048" startY="0.08571428571428572">
+                     <stops>
+                        <Stop color="#ffcb3c" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+            <Label fx:id="genre" layoutX="298.0" layoutY="257.0" prefHeight="62.0" prefWidth="124.0" text="genre" textFill="#bfb3b3">
+               <font>
+                  <Font name="Yu Gothic UI Light" size="30.0" />
+               </font>
+            </Label>
+            <Label fx:id="detailArt" alignment="TOP_LEFT" layoutX="298.0" layoutY="415.0" prefHeight="410.0" prefWidth="1083.0" text="desc" textFill="#bfb3b3">
+               <font>
+                  <Font name="Yu Gothic UI Light" size="21.0" />
+               </font>
+               <effect>
+                  <Lighting bumpInput="$null" diffuseConstant="1.63" specularExponent="0.0" surfaceScale="0.0">
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect>
+            </Label>
+            <JFXButton fx:id="prev" layoutX="44.0" layoutY="564.0" onAction="#HandleButtonAction" text="previous" textFill="#ff4d00">
+               <font>
+                  <Font name="Yu Gothic UI Regular" size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="next" layoutX="1400.0" layoutY="579.0" onAction="#HandleButtonAction" text="next" textFill="#ffbe00">
+               <font>
+                  <Font name="Yu Gothic UI Regular" size="14.0" />
+               </font>
+            </JFXButton>
+            <ImageView fx:id="image" fitHeight="354.0" fitWidth="435.0" layoutX="965.0" layoutY="61.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

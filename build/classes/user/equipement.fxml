@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" onMouseClicked="#handleButtonAction" prefHeight="596.0" prefWidth="1456.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="user.EquipementController">
+    <stylesheets>
+        <URL value="@equipement.css" />
+    </stylesheets>
+   <children>
+      <TableView fx:id="TabEQ" layoutX="798.0" layoutY="107.0" prefHeight="304.0" prefWidth="644.0" style="-fx-background-color: none;">
+        <columns>
+          <TableColumn fx:id="idEQ" prefWidth="132.0" text="ID equipement" />
+          <TableColumn fx:id="nomEQ" minWidth="7.0" prefWidth="163.0" text="nom equipement" />
+            <TableColumn fx:id="typeEQ" minWidth="7.0" prefWidth="158.0" text="type equipement" />
+            <TableColumn fx:id="nomENTR" minWidth="7.0" prefWidth="188.0" text="nom entreprise" />
+        </columns>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </TableView>
+      <Text layoutX="368.0" layoutY="129.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nom equipement" wrappingWidth="184.46875">
+         <font>
+            <Font name="Yu Gothic UI Light" size="24.0" />
+         </font>
+      </Text>
+      <Text layoutX="368.0" layoutY="218.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Type equipement" wrappingWidth="184.46873307228088">
+         <font>
+            <Font name="Yu Gothic UI Light" size="24.0" />
+         </font>
+      </Text>
+      <Text layoutX="368.0" layoutY="324.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nom d'entreprise " wrappingWidth="184.46873307228088">
+         <font>
+            <Font name="Yu Gothic UI Light" size="24.0" />
+         </font>
+      </Text>
+      <JFXTextField fx:id="nomEqui" alignment="CENTER" focusColor="#3fa1a8" layoutX="553.0" layoutY="107.0" prefHeight="25.0" prefWidth="184.0" promptText="inserer ici">
+         <font>
+            <Font name="Yu Gothic UI Light" size="12.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="TypEqui" alignment="CENTER" focusColor="#378f94" layoutX="553.0" layoutY="196.0" prefHeight="25.0" prefWidth="184.0" promptText="inserer ici">
+         <font>
+            <Font name="Yu Gothic UI Light" size="12.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="NomE" alignment="CENTER" focusColor="#307f83" layoutX="553.0" layoutY="302.0" prefHeight="25.0" prefWidth="184.0" promptText="inserer ici">
+         <font>
+            <Font name="Yu Gothic UI Light" size="12.0" />
+         </font>
+      </JFXTextField>
+      <Pane prefHeight="596.0" prefWidth="342.0" style="-fx-background-color: BLACK;">
+         <children>
+            <Text fill="#cdcdcd" layoutY="114.0" strokeType="OUTSIDE" strokeWidth="0.0" text="GESTION D 'EQUIPEMENT" textAlignment="CENTER" wrappingWidth="341.99998420476913">
+               <font>
+                  <Font name="Yu Gothic UI Semilight" size="26.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="160.0" fitWidth="286.0" layoutX="35.0" layoutY="412.0">
+               <image>
+                  <Image url="@../Images/uno.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <JFXButton fx:id="Add" layoutX="482.0" layoutY="454.0" onAction="#handleButtonAction" prefHeight="47.0" prefWidth="71.0" text="ADD">
+         <font>
+            <Font name="Yu Gothic Regular" size="16.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="Delete" layoutX="591.0" layoutY="454.0" onAction="#handleButtonAction" prefHeight="47.0" prefWidth="93.0" text="Delete">
+         <font>
+            <Font name="Yu Gothic Regular" size="16.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="Update" layoutX="705.0" layoutY="454.0" onAction="#handleButtonAction" prefHeight="47.0" prefWidth="93.0" text="Update">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="Refresh" layoutX="1383.0" layoutY="429.0" onAction="#handleButtonAction" ripplerFill="#478083" text="Refresh">
+         <font>
+            <Font name="Yu Gothic UI Regular" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="swit" layoutX="1316.0" layoutY="537.0" onAction="#handleButtonAction" text="All the equipements" textFill="#614824">
+         <font>
+            <Font name="Yu Gothic UI Semilight" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="PToPDF" layoutX="1000.0" layoutY="524.0" onAction="#handleButtonAction" text="print to PDF" textFill="#e40000" underline="true">
+         <font>
+            <Font name="Yu Gothic UI Semilight" size="17.0" />
+         </font>
+         <effect>
+            <Shadow />
+         </effect>
+      </JFXButton>
+   </children>
+</AnchorPane>

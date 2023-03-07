@@ -27,8 +27,8 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javax.swing.JOptionPane;
 import org.controlsfx.control.Rating;
-import services.Voteservices;
-import services.userServices;
+import SERVICES.Voteservices;
+import SERVICES.userServices;
 import static user.LoginController.lab1;
 
 /**

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="665.0" prefWidth="1526.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="user.RenequipController">
+    <stylesheets>
+        <URL value="@renequip.css" />
+    </stylesheets>
+   <children>
+      <TableView fx:id="TABeq" layoutX="337.0" layoutY="102.0" prefHeight="461.0" prefWidth="1161.0" style="-fx-background-color: NONE;">
+        <columns>
+          <TableColumn fx:id="idEQ" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="nomEQ" prefWidth="301.0" text="nom" />
+            <TableColumn fx:id="typeEQ" prefWidth="348.0" text="type" />
+            <TableColumn fx:id="nomENTR" prefWidth="436.0" text="entreprise" />
+        </columns>
+      </TableView>
+      <JFXTextField fx:id="search" layoutX="341.0" layoutY="40.0" prefHeight="31.0" prefWidth="1152.0" promptText="Recherche">
+         <font>
+            <Font name="Yu Gothic UI Semilight" size="15.0" />
+         </font>
+      </JFXTextField>
+      <Pane prefHeight="665.0" prefWidth="326.0" style="-fx-background-color: BLACK;">
+         <children>
+            <Text fill="#bfb9b9" layoutX="51.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EQUIPEMENTS" wrappingWidth="204.830078125">
+               <font>
+                  <Font name="Yu Gothic UI Light" size="29.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="140.0" fitWidth="239.0" layoutX="44.0" layoutY="511.0">
+               <image>
+                  <Image url="@../Images/uno.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <JFXButton fx:id="ReturnEQ" layoutX="1429.0" layoutY="601.0" onAction="#HandleButtonAction" text="Return" />
+   </children>
+</AnchorPane>

@@ -10,7 +10,12 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 
 /**
  * FXML Controller class
@@ -37,7 +42,8 @@ public class AdminHomePageController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+         
+             
     }    
 
     @FXML
@@ -46,6 +52,31 @@ public class AdminHomePageController implements Initializable {
              SceneController sc = new SceneController();
              sc.switchToScene8(event);
         }
+         if (event.getSource()== eventsAd ){
+              SceneController sc = new SceneController();
+             sc.switchToScene14(event);
+            
+           
+            
+        }
+         if (event.getSource()== articlesAd) {
+             SceneController sc = new SceneController();
+             sc.switchToScene18(event);
+         }
+         if (event.getSource()== artistsAd){
+             SceneController sc = new SceneController();
+             sc.switchToScene21(event);
+         }
+         if (event.getSource()== equipAd){
+             SceneController sc = new SceneController();
+             sc.switchToScene22(event);
+         }
+         if (event.getSource()== equipAd){
+             SceneController sc = new SceneController();
+             sc.switchToScene22(event);
+         }if (event.getSource()== boutiqueAd){
+             SceneController sc = new SceneController();
+             sc.switchToScene24(event);
+         }
     }
-    
 }

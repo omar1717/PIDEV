@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="600" prefWidth="900.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="user.InterfaceBoutiqueController">
+    <stylesheets>
+        <URL value="@interfaceboutique.css" />
+    </stylesheets>
+    <children>
+         <Label layoutX="48.0" layoutY="59.0" styleClass="titleLabel" text="Bienvenue dans notre boutique" />
+        <ImageView fitHeight="91.0" fitWidth="148.0" layoutX="738.0" layoutY="14.0">
+            <image>
+                <Image url="file:C:\\Users\\MSI\\Desktop\\PIDEVGIT\\Image\\logoooo.png" />          
+            </image>
+        </ImageView>
+         <Button fx:id="ReservePlaceB" layoutX="164.0" layoutY="300.0" mnemonicParsing="false" onAction="#retourner3" prefWidth="25.0" styleClass="buttonStyle" text="Réservez votre place" />
+         <Button fx:id="ConsuProdB" layoutX="164.0" layoutY="236.0" mnemonicParsing="false" onAction="#retourner2" prefWidth="300" styleClass="buttonStyle" text="Consulter nos produits" />
+      <Button fx:id="ConsulterPB" layoutX="164.0" layoutY="362.0" mnemonicParsing="false" onAction="#retourner" prefWidth="25.0" styleClass="buttonStyle" text="Consulter Votre Panier" />
+      <Button fx:id="back" layoutX="769.0" layoutY="538.0" mnemonicParsing="false" onAction="#back" text="back" />
+    </children>
+</AnchorPane>
